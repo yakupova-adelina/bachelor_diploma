@@ -1,0 +1,13 @@
+<form method="post" style="display: table">
+    {% csrf_token %}
+    {% for field in form %}
+    <p style="display: table-row">
+        <label style="display: table-cell; text-align: right;
+            padding-right: 10px; padding-bottom: 10px">
+            {{ field.label }}
+        </label>
+        {{ field }}
+    </p>
+    {% endfor %}
+    <input type="submit" value="Узнать результат">
+</form>
